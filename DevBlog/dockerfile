@@ -1,3 +1,6 @@
 FROM jekyll/jekyll
 
-ENTRYPOINT ["jekyll", "serve", "--incremental", "-w"]
+CMD ["Jekyll", "build"]
+
+
+ENTRYPOINT ["jekyll", "serve", "--incremental"]

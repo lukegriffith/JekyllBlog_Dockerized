@@ -1,5 +1,4 @@
 #!/bin/sh
-echo $1
 
 pushd $(pwd)
 
@@ -11,4 +10,4 @@ BlogPath=$(pwd)
 
 popd
 
-docker run -v "$BlogPath:/srv/jekyll" -p 4000:4000 $1 
+docker run -v "$BlogPath:/srv/jekyll" -p 4000:4000 lukegriffith/blog_dev
