@@ -1,7 +1,14 @@
 #!/bin/sh
 echo $1
 
+pushd $(pwd)
 
-BlogPath="/Users/luke/GitHub/JekyllBlog_Dockerized/Blog"
+cd ..
 
-docker run -v "$BlogPath:/var/www" $1 
+cd Blog
+
+BlogPath=$(pwd)
+
+popd
+
+docker run -v "$BlogPath:/srv/jekyll" -p 4000:4000 $1 
